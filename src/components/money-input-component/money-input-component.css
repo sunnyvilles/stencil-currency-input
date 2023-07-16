@@ -1,0 +1,34 @@
+:host {
+  --input-border-color: grey;
+  --base-font-size: 2rem;
+}
+
+.ipnut-container {
+  border: 1px solid white;
+  border-bottom: 1px solid var(--input-border-color);
+  font-size: var(--base-font-size);
+}
+
+input[type="text"] {
+  height: 2rem;
+  border: 0;
+  padding: 1rem;
+  font-size: var(--base-font-size);
+}
+
+input[type="text"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#dollars-input {
+  text-align: right;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.ipnut-container:focus-within {
+  border: 1px solid blue;
+}
