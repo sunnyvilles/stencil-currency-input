@@ -20,7 +20,8 @@ export class MoneyInputComponent {
     this.reset();
   }
 
-  validateValue(value: string): boolean {
+  //todo : move to util
+  private validateValue(value: string): boolean {
     const regex = new RegExp(this.validator);
     return regex.test(value);
   }
@@ -38,7 +39,7 @@ export class MoneyInputComponent {
     this.valueChange.emit(result);
   }
 
-  processReturnValue() {
+  private processReturnValue() {
     let value = `${this.dollars}.${this.cents}`;
     let isValid = false;
 
